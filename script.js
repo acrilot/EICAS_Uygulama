@@ -1,6 +1,6 @@
-// ==========================================
+// ======================================
 // 1. SABİTLER & SİSTEM DEĞİŞKENLERİ
-// ==========================================
+// ======================================
 
 // Motor rotasyon gösterge sabitleri (Açısal hesaplamalar için)
 const ROTATION_START_ANGLE = 0; // İbrenin başlangıç açısı
@@ -28,9 +28,9 @@ const ELEMENTS_TO_HIDE_INITIALLY = [
     'crossbleed_text', 'low_text'
 ];
 
-// ==========================================
-// 2. DURUM (STATE) DEĞİŞKENLERİ
-// ==========================================
+// ==========================
+// 2. DURUM DEĞİŞKENLERİ
+// ==========================
 
 // --- Yakıt Durumu ---
 let fuelLevelLeftWing = MAX_FUEL_WING;
@@ -87,9 +87,9 @@ setTimeout(() => { areAlertsInhibited = false; }, 1500);
 // Aynı hatanın art arda animasyonunu engellemek için zamanlayıcıları takip eder
 const warningTimers = {};
 
-// ==========================================
+// ====================================================
 // 3. BAŞLANGIÇ TEMİZLİĞİ VE YARDIMCI FONKSİYONLAR
-// ==========================================
+// ====================================================
 
 // Ekranda varsayılan olarak gizlenmesi gereken SVG elementlerini gizler
 function resetSystemUI() {
@@ -164,9 +164,9 @@ function updateRotationAngle(id, angle, sweepId) {
     }
 }
 
-// ==========================================
+// =============================================
 // 4. MOTOR METRİKLERİ VE LİMİT KONTROLLERİ
-// ==========================================
+// =============================================
 
 // Motor metriklerinin (N1, N2, EGT vb.) limitleri aşıp aşmadığını kontrol eder ve renklendirir
 function checkEngineLimits(side, n1, n2, egt, vib, press, temp) {
@@ -318,9 +318,9 @@ function updateEngineState(throttleValue, side) {
     }
 }
 
-// ==========================================
+// =====================================
 // 5. ARIZA / UYARI TETİKLEYİCİLERİ
-// ==========================================
+// =====================================
 
 // EICAS ekranındaki yanıp sönen (blink) veya sabit yanan uyarı kutularını/metinlerini kontrol eder
 function triggerEICASWarning(elementId, activate) {
@@ -402,9 +402,9 @@ function toggleFailure(type, side) {
     triggerEICASWarning('lop_text2', isLopFailRight);
 }
 
-// ==========================================
+// ============================================
 // 6. KULLANICI ARAYÜZÜ (UI) ETKİLEŞİMLERİ
-// ==========================================
+// ============================================
 
 // Thrust Reverser (Ters İtme) kapakları simülasyonu
 function toggleReverser(side) {
@@ -611,9 +611,9 @@ if (inertiaMultValInput) {
     });
 }
 
-// ==========================================
-// 7. YAKIT TÜKETİMİ VE MOTOR DÖNGÜSÜ (LOOP)
-// ==========================================
+// =======================================
+// 7. YAKIT TÜKETİMİ VE MOTOR DÖNGÜSÜ
+// =======================================
 
 // Yakıt göstergelerini (kanat ve merkez tanklar) ve barları ekrana yansıtır
 function updateFuelDisplay() {
@@ -743,9 +743,9 @@ function engineLoop() {
     requestAnimationFrame(engineLoop);
 }
 
-// ==========================================
-// 8. OTOMATİK SENARYO OYNATIMI (FLIGHT SCENARIOS)
-// ==========================================
+// ========================
+// 8. UÇUŞ SENARYOLARI
+// ========================
 
 let scenarioTimeoutIds = [];
 
