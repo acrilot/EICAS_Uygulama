@@ -1,8 +1,4 @@
-# EICAS_Uygulama
-Elektronik Gösterge Sistemleri dersi EICAS Primary Parameters Display uygulaması kaynak kodları.
-
 # Engine-Indicating and Crew-Alerting System (EICAS) Primary Parameters Display Simülasyonu
-
 
 <img width="1920" height="1080" alt="Uygulama Ekran Görüntüsü" src="https://github.com/user-attachments/assets/2d04290a-c6d6-44ba-989f-4bd2b5e95883" />\
 Bu uygulama, Boeing 737-600 ve Boeing 737-700 modellerinde kullanılan EICAS Primary Parameters Display baz alınarak yapılmıştır.
