@@ -96,7 +96,7 @@ Sayfalardaki yazılar, ok işaretleri, sayfa numaraları ve diğer gereksiz öğ
 Öncelikle çizimler bir maske katmanı haline getirilmiştir. Ardından bunun üzerine eklenen boş bir katman üzerinde manuel olarak temiz ve tek parça görüntüler halinde yeniden çizilmiştir. Göstergede kontrolü sağlanacak tüm gruplar ve yollara birer ID atanmıştır.
 
 <img width="1920" height="1030" alt="Maske Üzerine Çizim" src="https://github.com/user-attachments/assets/ca8fdc0f-4b02-4bc9-aaf4-03367a9c12e9" />\
-<img width="1920" height="1030" alt="ID Atanması" src="https://github.com/user-attachments/assets/83676ce3-0271-4879-8cf3-0f4a501857ba" />
+<img width="1920" height="1030" alt="ID Atanması" src="https://github.com/user-attachments/assets/7f75c26c-3f3e-4925-8879-d27f94d29a82" />
 
 >### Çizimin HTML koduna entegre edilmesi
 
