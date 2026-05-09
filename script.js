@@ -247,6 +247,8 @@ function updateEngineState(throttleValue, side) {
     targetOilPress -= (10 * oilLossRatio);  // Yağ azaldıkça basınç düşer
 
     if (isSysCrossbleed) targetEgt += 15; // Çapraz besleme aktifse EGT (Egzoz Gazı Sıcaklığı) artar
+
+    const displayFf = currentFuelUnit === 'KG' ? (ff * KG_CONVERSION) : ff; // Fuel Flow değeri seçili yakıt birimine bağlandı
     
     // Sol Motor İşlemleri
     if (side === 'L') {
@@ -277,7 +279,7 @@ function updateEngineState(throttleValue, side) {
         updateTextContent('val_oil_temp_l', currentOilTempLeft.toFixed(0));
         updateTextContent('val_oil_qty_l', currentOilQtyLeft.toFixed(0));
         updateTextContent('val_n2_l', currentN2Left.toFixed(1));
-        updateTextContent('val_ff_l', ff.toFixed(1));
+        updateTextContent('val_ff_l', displayFf.toFixed(1));
         updateTextContent('val_vib_l', vib.toFixed(1));
 
         checkEngineLimits('L', n1, currentN2Left, currentEgtLeft, vib, currentOilPressLeft, currentOilTempLeft);
@@ -311,7 +313,7 @@ function updateEngineState(throttleValue, side) {
         updateTextContent('val_oil_temp_r', currentOilTempRight.toFixed(0));
         updateTextContent('val_oil_qty_r', currentOilQtyRight.toFixed(0)); 
         updateTextContent('val_n2_r', currentN2Right.toFixed(1));
-        updateTextContent('val_ff_r', ff.toFixed(1));
+        updateTextContent('val_ff_r', displayFf.toFixed(1));
         updateTextContent('val_vib_r', vib.toFixed(1));
 
         checkEngineLimits('R', n1, currentN2Right, currentEgtRight, vib, currentOilPressRight, currentOilTempRight);
