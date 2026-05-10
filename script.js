@@ -489,9 +489,7 @@ function updateN1ReferenceBug() {
     updateTextContent('val_n1_ref_r', n1ReferenceValue.toFixed(1));
     
     // Açı en fazla 105 üzerinden hesaplansın
-    const visualRef = Math.min(n1ReferenceValue, 105);
-    const percentage = visualRef / PERCENTAGE_DIVISOR;
-    const refAngle = ROTATION_START_ANGLE + (percentage * (ROTATION_END_ANGLE - ROTATION_START_ANGLE));
+    const refAngle = 2 * Math.min(n1ReferenceValue, 105);
     
     const bugL = document.getElementById('n1_ref_bug_l');
     const bugR = document.getElementById('n1_ref_bug_r');
